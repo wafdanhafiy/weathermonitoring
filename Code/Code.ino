@@ -8,9 +8,9 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 DHT dht(D3, DHT11); //(sensor pin,sensor type)
 BlynkTimer timer;
 
-char auth[] = "HyGnrku__rNk7rMDm0mA31Rm8_t97_z5"; //Enter the Auth code which was send by Blink
-char ssid[] = "WirelessId";  //Enter your WIFI Name
-char pass[] = "qwer1234";  //Enter your WIFI Password
+char auth[] = "f3BzRxNvkuyDkX4AHMcz3GyOWqB_TIAM";  // the Auth code
+char ssid[] = "Mang haji_plus";  // WIFI Name
+char pass[] = "mutiahilman";  // WIFI Password
 
 void weather() {
   float h = dht.readHumidity();
@@ -24,9 +24,9 @@ void weather() {
     return;
   }
 
-  Blynk.virtualWrite(V0, t);  //V0 is for Temperature
-  Blynk.virtualWrite(V1, h);  //V1 is for Humidity
-  Blynk.virtualWrite(V2, r);  //V2 is for Rainfall
+  Blynk.virtualWrite(V0, t);  // V0 is for Temperature
+  Blynk.virtualWrite(V1, h);  // V1 is for Humidity
+  Blynk.virtualWrite(V2, r);  // V2 is for Rainfall
 
   if (l == 0) {
     WidgetLED led1(V3);
@@ -56,7 +56,6 @@ void weather() {
   lcd.print("R :");
   lcd.print(r);
   lcd.print("  ");
-
 }
 
 void setup() {
