@@ -9,8 +9,8 @@ DHT dht(D3, DHT11); //(sensor pin,sensor type)
 BlynkTimer timer;
 
 char auth[] = "mQmqYqW6JeU7SWMoOH76hyM1fEzlk5WQ";  // the Auth code
-char ssid[] = "Mang haji_plus";  // WIFI Name
-char pass[] = "mutiahilman";  // WIFI Password
+char ssid[] = "WiFiId";  // WIFI Name
+char pass[] = "abcd1234";  // WIFI Password
 
 void weather() {
   float h = dht.readHumidity();
