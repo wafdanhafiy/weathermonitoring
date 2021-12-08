@@ -4,11 +4,15 @@
 #include <BlynkSimpleEsp8266.h>
 #include <DHT.h>
 
+#define BLYNK_TEMPLATE_ID           "TMPLbBNcjUJ3"
+#define BLYNK_DEVICE_NAME           "Quickstart Device"
+#define BLYNK_AUTH_TOKEN            "E7FDpGrwgNmw5Mrb8kvJkbJnATAioeXp"
+
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 DHT dht(D3, DHT11); //(sensor pin,sensor type)
 BlynkTimer timer;
 
-char auth[] = "l871L2JUtMDDx4khimWJsCNcPZYfJxIh";  // the Auth code
+char auth[] = "epdGGyJoeQYJFj-sYtN7VYQ6QiQqFXzZ";  // the Auth code
 char ssid[] = "Mang haji_plus";  // WIFI Name
 char pass[] = "mutiahilman";  // WIFI Password
 
