@@ -7,7 +7,7 @@
 #include <BlynkSimpleEsp8266.h>
 #include <DHT.h>
 
-DHT dht(D3, DHT11); //(sensor pin, sensor type)
+DHT dht(D3, DHT11);  // (sensor pin, sensor type)
 BlynkTimer timer;
 
 char auth[] = BLYNK_AUTH_TOKEN;
@@ -21,14 +21,15 @@ void weather() {
   int l = digitalRead(D4);
 
   r = map(r, 0, 1023, 100, 0);
+
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor!");
     return;
   }
 
-  Blynk.virtualWrite(V0, t);  // V0 untuk Temperature
-  Blynk.virtualWrite(V1, h);  // V1 untuk Humidity
-  Blynk.virtualWrite(V2, r);  // V2 untuk Rainfall
+  Blynk.virtualWrite(V0, t);  // V0 for Temperature
+  Blynk.virtualWrite(V1, h);  // V1 for Humidity
+  Blynk.virtualWrite(V2, r);  // V2 for Rainfall
 
   if (l == 0) {
     WidgetLED led1(V3);
@@ -42,7 +43,6 @@ void weather() {
 void setup() {
   // Debug console
   Serial.begin(115200);
-
   Blynk.begin(auth, ssid, pass);
   dht.begin();
   // Setup a function to be called every second
