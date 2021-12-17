@@ -1,7 +1,3 @@
-#define BLYNK_TEMPLATE_ID           "TMPLYL6H3s0Y"
-#define BLYNK_DEVICE_NAME           "Quickstart Device"
-#define BLYNK_AUTH_TOKEN            "zAdfBEB50NE9sw0Jtw_1dmWXIeasjxZJ"
-
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
@@ -9,6 +5,10 @@
 
 DHT dht(D3, DHT11);  // (sensor pin, sensor type)
 BlynkTimer timer;
+
+#define BLYNK_TEMPLATE_ID             "TMPLYL6H3s0Y"
+#define BLYNK_DEVICE_NAME             "Weather Monitoring"
+#define BLYNK_AUTH_TOKEN              "zAdfBEB50NE9sw0Jtw_1dmWXIeasjxZJ"
 
 char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "Mang haji_plus";
