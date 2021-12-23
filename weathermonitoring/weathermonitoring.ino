@@ -11,8 +11,8 @@ BlynkTimer timer;
 #define BLYNK_AUTH_TOKEN              "zAdfBEB50NE9sw0Jtw_1dmWXIeasjxZJ"
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "Mang haji_plus";
-char pass[] = "mutiahilman";
+char ssid[] = "user1234";
+char pass[] = "user1234";
 
 void weather() {
   int h = dht.readHumidity();
