@@ -11,7 +11,7 @@ BlynkTimer timer;
 #define BLYNK_AUTH_TOKEN              "zAdfBEB50NE9sw0Jtw_1dmWXIeasjxZJ"
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "user123";
+char ssid[] = "ssid123";
 char pass[] = "pass123";
 
 void weather() {
